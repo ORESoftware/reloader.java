@@ -1,0 +1,58 @@
+https://www.mkyong.com/maven/how-to-create-a-jar-file-with-maven/
+
+https://www.rainerhahnekamp.com/en/publishing-a-java-library-to-maven-central/
+
+contact Suguru Montegi - Suguru Motegi
+https://github.com/suguru03/neo-async
+
+do filterAndMap
+
+
+q.onSaturated(1, queue -> {
+    System.out.println("saturated");
+});
+
+ should only fire the callback once.
+
+
+q.onSaturated(1, (queue, v) -> {
+    System.out.println("saturated");
+    v.removeThisCallback();
+});
+
+ should only fire the callback once.
+
+
+ using async.waterfall with a map
+
+async.waterfall([
+ v => {
+   v.set('foo', 'bar');
+   v.done();
+ },
+ v => {
+    var foo = v.get("bar");
+    v.done(null, "foo", "bar");
+ }
+]
+
+
+use a Threadpool of size 1 to process callbacks
+
+https://github.com/vert-x3/vertx-guide-for-java-devs
+
+https://stackoverflow.com/questions/337903/how-can-you-ensure-in-java-that-a-block-of-code-can-not-be-interrupted-by-any-ot
+
+https://docs.oracle.com/javase/tutorial/essential/concurrency/interrupt.html
+
+
+https://issues.sonatype.org/login.jsp?os_destination=%2Fsecure%2Fdefault.jsp
+
+async.series is just async.parallelLimit(1)
+
+
+http://maven.apache.org/maven-release/maven-release-plugin/
+
+
+dynamic class re-loading
+https://www.toptal.com/java/java-wizardry-101-a-guide-to-java-class-reloading
